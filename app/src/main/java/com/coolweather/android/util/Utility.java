@@ -39,6 +39,7 @@ public class Utility {
     public static boolean handleCityResponse(String response,int provinceId){
         if(!TextUtils.isEmpty(response)){
             try{
+                //下面这行的参数response漏写了,因此造成了无限刷新
                 JSONArray allCities = new JSONArray(response);
                 for(int i = 0;i < allCities.length();i++){
                     JSONObject cityObject = allCities.getJSONObject(i);
